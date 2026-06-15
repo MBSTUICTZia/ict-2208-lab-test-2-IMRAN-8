@@ -25,13 +25,28 @@ public class ShapeMain {
             System.out.println();
         }
 
-        System.out.println("--- Downcast Check ---");
-        for (Shape s : shapes) {
-            if (s instanceof Rectangle r) {
-                System.out.println("Rectangle width=" + r.getWidth() + " length=" + r.getLength());
-            } else if (s instanceof Circle c) {
-                System.out.println("Circle radius=" + c.getRadius());
-            }
+       System.out.println("--- Downcast Check ---");
+
+for (Shape s : shapes) {
+
+    if (s instanceof Rectangle) {
+        Rectangle r = (Rectangle) s;
+        System.out.println(
+            "Rectangle width=" +
+            r.getWidth() +
+            " length=" +
+            r.getLength()
+        );
+    }
+
+    else if (s instanceof Circle) {
+        Circle c = (Circle) s;
+        System.out.println(
+            "Circle radius=" +
+            c.getRadius()
+        );
+    }
+}
         }
         sc.close();
     }
